@@ -44,8 +44,8 @@ export async function POST(req: Request) {
       if (userMemberships.data.length > 0) {
         organizationId = userMemberships.data[0].organization.id;
       }
-    } catch (error) {
-      // console.log("Failed to get user organization memberships:", error);
+    } catch (_error) {
+      console.log("Failed to get user organization memberships:", _error);
     }
   }
   
